@@ -1,0 +1,52 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+
+import Footer from "../components/Footer.astro";
+import Navbar from "../components/Navbar.astro"
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <Navbar />
+  <body class="bg-white">
+    <p class="flex xl:hidden justify-center text-gray-900 font-bold">Page not supported for devices below 1280p</p>
+    <div class="hidden xl:block">
+      <slot />
+    </div>
+  </body>
+  <Footer />
+</html>
+
+<style is:global>
+  :root {
+    --sixty: white;
+    --thirty: #f3f4f6;
+    --ten: #fdd308;
+  }
+  ::selection {
+    background: var(--ten);
+    color: #111827;
+  }
+  * {
+    margin: 0;
+  }
+  /* Hide scrollbars without impacting scrolling */
+  body::-webkit-scrollbar {
+    display: none;
+  }
+  button {
+    background-color: var(--ten);
+  }
+</style>

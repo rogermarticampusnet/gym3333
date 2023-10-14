@@ -1,0 +1,24 @@
+---
+interface Props {
+    gym: string;
+    address: string;
+}
+
+const { gym, address } = Astro.props;
+---
+<a class="group grid grid-cols-2 bg-gray-950 h-[6vw] w-full mx-auto rounded-3xl hover:cursor-pointer hover:bg-[var(--ten)] ease-in-out duration-300 hover:scale-105"
+href={`locations/${gym}`}>
+    <div class="w-full ml-10 mx-auto my-auto">
+        <p class="text-white group-hover:text-gray-950 mx-auto font-bold text-left mt-2">{gym}</p>
+    </div>
+    <div class="w-full mx-auto my-auto">
+        <p class="text-white group-hover:text-gray-950 mx-auto font-bold text-right mr-10 underline">{address}
+            <svg xmlns="http://www.w3.org/2000/svg" class="inline ml-2 icon icon-tabler icon-tabler-arrow-right-circle" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M18 15l3 -3l-3 -3"></path>
+                <path d="M5 12m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+                <path d="M7 12h14"></path>
+             </svg>
+        </p>
+    </div>
+</a>

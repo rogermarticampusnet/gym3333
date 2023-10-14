@@ -1,0 +1,61 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Register">
+  <div class="bg-gray-100 w-5/6 h-full mx-auto rounded-lg mt-10 mb-10 py-20 px-36">
+    <div class="block rounded-3xl bg-gray-900">
+      <form class="mx-auto py-16 block items-center px-36 grid-rows-5">
+        <div class="mb-6">
+          <label for="email" class="block mb-2 text-sm font-medium text-gray-100">Your email</label>
+          <input type="email" id="email" class="w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-[var(--ten)]" placeholder="thestrongest@gym.com" required>
+        </div>
+
+        <div class="mb-6">
+          <label for="email" class="block mb-2 text-sm font-medium text-gray-100">Confirm email</label>
+          <input type="email" id="email" class="w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-[var(--ten)]" placeholder="thestrongest@gym.com" required>
+        </div>
+
+        <div class="mb-6">
+          <label for="password" class="block mb-2 text-sm font-medium text-gray-100">Your password</label>
+          <input type="password" id="password" class="w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-[var(--ten)]" placeholder="Password123*" required>
+        </div>
+
+        <div class="mb-6">
+          <label for="password" class="block mb-2 text-sm font-medium text-gray-100">Confirm password</label>
+          <input type="password" id="password" class="w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-[var(--ten)]" placeholder="Password123*" required>
+        </div>
+
+        <div class="mb-6">
+          <label for="gym" class="block mb-2 text-sm font-medium text-gray-100">Select your gym</label>
+          <select id="gym" class="w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-[var(--ten)]" required>
+            <option value="gym-origo">GYM! Origo</option>
+            <option value="gym-imanta">GYM! Imanta</option>
+            <option value="gym-olimpia">GYM! Olimpia</option>
+          </select>
+        </div>
+
+        <div class="mb-6">
+          <label for="membership" class="block mb-2 text-sm font-medium text-gray-100">Select your membership</label>
+          <select id="membership" class="w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-[var(--ten)]" required>
+            <option value="lifestyle">Lifestyle - (€19 / month)</option>
+            <option value="365days">365 Days - (€189 / year)</option>
+            <option value="trialtraining">Trial Training - (€9.95 / 3 days)</option>
+          </select>
+        </div>
+
+        <button type="submit" class="text-gray-900 font-bold bg-[var(--ten)] duration-300 ease-in-out hover:opacity-80 focus:ring-4 focus:outline-none rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Register</button>
+      </form>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  input[type="checkbox"]:checked {
+    background-color: var(--ten);
+  }
+  select {
+    background-color: #1d2432; /* Set the background color of the dropdown menu */
+    color: white; /* Set the text color of the dropdown menu */
+  }
+</style>

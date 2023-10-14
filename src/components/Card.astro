@@ -1,0 +1,109 @@
+---
+interface Props {
+  title: string;
+  price: string;
+  frequency: string;
+  checkOne: string;
+  checkTwo: string;
+  checkThree: string;
+  checkFour: string;
+}
+
+const { title, price, frequency, checkOne, checkTwo, checkThree, checkFour } =
+  Astro.props;
+---
+
+<a
+  href="/register"
+  class="w-1/4 p-6 mx-2 text-center border border-gray-600 bg-gray-900 text-white rounded-3xl hover:scale-105 ease-in-out duration-300 hover:bg-gray-950 group h-fit"
+>
+  <h3 class="mb-4 font-semibold mt-4 text-[1.3vw]">{title}</h3>
+  <div class="flex justify-center items-baseline my-8 mb-10">
+    <span class="mr-2 text-[3.5vw] group-hover:text-[var(--ten)] font-extrabold">{price}</span>
+    <span class="text-gray-500 dark:text-gray-400">{frequency}</span>
+  </div>
+  <ul role="list" class="mb-8 space-y-8 text-left ml-2">
+    <li class="flex items-center space-x-3">
+      <!-- Icon -->
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="icon icon-tabler icon-tabler-check"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        stroke-width="2"
+        stroke="currentColor"
+        fill="none"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M5 12l5 5l10 -10"></path>
+      </svg>
+      <span class="check">{checkOne}</span>
+    </li>
+    <li class="flex items-center space-x-3">
+      <!-- Icon -->
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="icon icon-tabler icon-tabler-check"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        stroke-width="2"
+        stroke="currentColor"
+        fill="none"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M5 12l5 5l10 -10"></path>
+      </svg>
+      <span class="check">{checkTwo}</span>
+    </li>
+    <li class="flex items-center space-x-3">
+      <!-- Icon -->
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="icon icon-tabler icon-tabler-check"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        stroke-width="2"
+        stroke="currentColor"
+        fill="none"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M5 12l5 5l10 -10"></path>
+      </svg>
+      <span class="check">{checkThree}</span>
+    </li>
+    <li class="flex items-center space-x-3">
+      <!-- Icon -->
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="icon icon-tabler icon-tabler-check"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        stroke-width="2"
+        stroke="currentColor"
+        fill="none"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M5 12l5 5l10 -10"></path>
+      </svg>
+      <span class="check">{checkFour}</span>
+    </li>
+  </ul>
+</a>
+
+<style>
+  span.check {
+    font-size: 0.9vw;
+  }
+</style>

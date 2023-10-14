@@ -1,0 +1,50 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Card from "../components/Card.astro";
+---
+
+<Layout title="membership3333.">
+  <main>
+    <div class="bg-gray-100 w-5/6 h-full mx-auto rounded-lg mt-10 mb-10 py-20">
+      <div class="flex justify-center scale-110">
+        <Card
+          title="Lifestyle"
+          price="€19"
+          frequency="/month"
+          checkOne="Monthly Payment Management"
+          checkTwo="24/7 Access Information"
+          checkThree="Cancellation Process"
+          checkFour="Transparent Pricing"
+        />
+        <Card
+          title="365 Days"
+          price="€189"
+          frequency="/year"
+          checkOne="Automatic Renewal"
+          checkTwo="Holiday Closure Notifications"
+          checkThree="Refund Policy Details"
+          checkFour="Unrestricted Usage"
+        />
+        <Card
+          title="Trial Training"
+          price="€9.95"
+          frequency="/3 days"
+          checkOne="Quick Activation"
+          checkTwo="Expiration Alerts"
+          checkThree="Cancellation Instructions"
+          checkFour="Access to Amenities"
+        />
+      </div>
+      <div class="flex mx-auto mt-10 items-center justify-center">
+        <!-- button -->
+        <a
+        href="/register"
+        class="w-full mx-32 rounded-lg bg-ten px-6 py-3 mt-4 text-center text-sm font-semibold text-gray-900 shadow-sm duration-300 ease-in-out hover:scale-105"
+      >
+        Join now!
+      </a>
+      </div>
+    </div>
+  </main>
+</Layout>
