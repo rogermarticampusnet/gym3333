@@ -4,7 +4,7 @@ import CartItem from '../components/CartItem.astro'
 ---
 <Layout title="Shopping Cart">
     <main>
-        <div class="bg-gray-100 w-5/6 h-full mx-auto rounded-lg mt-10 mb-10 py-10 text-center">
+        <div class="flex flex-col bg-gray-100 w-5/6 h-full mx-auto rounded-lg mt-10 mb-10 py-10 text-center items-center justify-center">
             <p class="text-xl font-bold">Shopping Cart</p>
             <CartItem 
             title="Lifestyle Subscription"
@@ -16,7 +16,13 @@ import CartItem from '../components/CartItem.astro'
             description="3 days memebership"
             quantity={1}
             price={9.95}/>
+            <form action="/checkout">
+                <button
+                class="mt-16 py-2 px-20 rounded-xl font-bold"
+                >
+                    Checkout
+                </button>
+            </form>
         </div>
     </main>
-    
 </Layout>
