@@ -1,0 +1,48 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  quantity: number;
+  price: number;
+}
+
+const { title, description, quantity, price } = Astro.props;
+---
+
+<div class="bg-gray-900 text-white py-16 w-2/3 rounded-2xl grid grid-cols-2 mt-10 contenedorItem">
+    <div>
+        <img src="/image.jpg" alt="Product image" class="rounded-lg">
+    </div>
+    <div class="text-left mt-6 flex flex-col">
+        <h2 class="text-lg font-bold">{title}</h2>
+        <h3 class="mt-2 text-gray-500">{description}</h3>
+        <div class="mt-4 flex items-center">
+            <div class="flex items-center">
+                <span class="mr-2">Quantity:</span>
+                <p class="rounded-lg px-6">-</p>
+                <span class="mx-2">{quantity}</span>
+                <p class="rounded-lg px-6">+</p> 
+            </div>
+        </div>
+        <span class="mt-2">Price of the item: <span class="font-bold price">{price}€</span></span>
+    </div>
+</div>
+
+<style>
+    .contenedorItem {
+        margin-inline: 100px;
+    }
+    img {
+        width: 250px;
+        height: 200x;
+        margin-left: 40px;
+    }
+    p:hover {
+        background-color: var(--ten);
+        cursor: pointer;
+        color: black;
+    }
+    .price {
+        color: var(--ten)
+    }
+</style>
